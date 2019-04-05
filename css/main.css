@@ -1,0 +1,414 @@
+body {
+  padding: 0;
+  margin: 0;
+  /*  background: url("../images/pexels-photo-1308624.jpeg") center fixed no-repeat;
+  background-size: cover; */
+  background: #fff;
+}
+html {
+  scroll-behavior: smooth;
+}
+#header {
+  height: 100vh;
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+}
+.img {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/city.jpeg") center fixed no-repeat;
+  background-size: cover;
+  /*  animation: move 2s infinite ease-in-out alternate; */
+  height: 100%;
+}
+@keyframes move {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+.welcome-title {
+  color: white;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-transform: capitalize;
+}
+.welcome-title h1 {
+  font-size: 60px;
+  font-weight: bold;
+  margin: 10px;
+  animation: show 2s ease-in both;
+}
+.welcome-title p {
+  animation: show 2s 1s ease-in both;
+}
+@keyframes showpara {
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#navigation {
+  margin-bottom: 10px;
+}
+.navbar-nav {
+  padding: 0 !important;
+}
+/* about section */
+#about {
+  background-color: #eee;
+  margin-bottom: -20px;
+}
+#about h3 {
+  padding-top: 100px !important;
+}
+/* contact section */
+.about-box {
+  padding-bottom: 20px;
+}
+.about-box p {
+  font-style: italic;
+  color: rgb(52, 71, 87);
+}
+#contact {
+  background: #ddd;
+}
+.about-box:nth-child(odd) {
+  border-right: 5px solid rgb(35, 9, 70);
+}
+#about img {
+  margin-bottom: 20px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 800px) {
+  .about-box {
+    margin: 10px;
+  }
+  .about-box:nth-child(odd) {
+    border-right: none;
+    border-bottom: 5px solid rgb(35, 9, 70);
+  }
+  .scroll-btn {
+    bottom: 20% !important;
+    left: 40%;
+    transform: translate(-40%, -20%) !important;
+    position: absolute !important;
+  }
+  #header {
+    height: 600px;
+  }
+  .welcome-title {
+    top: 20%;
+    left: 20%;
+    transform: translate(-20%, -20%);
+  }
+}
+.scroll-btn {
+  bottom: 30px;
+  border: 1px solid white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 10px 20px;
+  border-radius: 30px;
+}
+.scroll-bar span {
+  font-size: 10px;
+  border: 3px solid white;
+  border-radius: 30px;
+}
+.scroll-bar {
+  animation: mover 1s infinite alternate;
+}
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+/* progress bar */
+.progress {
+  border: 1px solid black !important;
+}
+.progress-bar {
+  background: #000;
+}
+/* resume */
+.resume {
+  padding-top: 100px;
+  background-color: #eee;
+  padding-bottom: 30px;
+}
+.resume h3 {
+  margin: 10px;
+}
+.timeline {
+  list-style-type: none;
+  position: relative;
+}
+.timeline:before {
+  content: "";
+  height: 100%;
+  background: #555;
+  width: 5px;
+  position: absolute;
+  left: 29px;
+  display: inline-block;
+  z-index: 1;
+}
+.timeline li {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  background: #fff;
+
+  transition: 0.3s all ease-in-out;
+}
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #000;
+  z-index: 1;
+  background: #fff;
+  border-radius: 50%;
+}
+.timeline li:hover {
+  box-shadow: 2px 2px 4px #555;
+  border-radius: 5px;
+}
+.timeline li h4 {
+  background-color: #000;
+  color: #fff;
+  padding: 5px 0 5px 20px;
+}
+.timeline li h4 span {
+  color: #ccc;
+  font-weight: bold;
+}
+.timeline li p {
+  padding-left: 5px;
+}
+/* services */
+
+.services {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.services h1 {
+  margin-bottom: 10px;
+  padding-top: 50px;
+}
+.services p,
+ul li {
+  margin-bottom: 10px;
+  color: #777;
+}
+.service-box {
+  background: #f9f9f9;
+  padding: 10px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  margin: 2px;
+  transition: 0.4s all ease-in-out;
+  animation: onebyone 1s ease-in;
+}
+.service-box:hover {
+  background: #000;
+  color: #fff;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  transform: translateY(-10px);
+  box-shadow: 3px 3px 4px #777;
+}
+.service-box .fa,
+.fab,
+.fas {
+  margin: 0 10px;
+  font-size: 20px;
+}
+.service-box span {
+  font-weight: bold;
+  margin: 3px;
+  font-size: 20px;
+}
+
+.service-box:hover p {
+  color: #fff;
+}
+.service-box:hover li {
+  color: #fff;
+}
+.fa-heart {
+  color: red;
+}
+/* contact */
+.contact {
+  padding-top: 50px;
+  background-attachment: fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+    url("../images/architecture-bridge-buildings-1850587.jpg") center center
+      fixed !important;
+  background-size: cover;
+  color: White;
+}
+.contact .row {
+  padding: 30px 0;
+  font-size: 22px;
+}
+.contact .col-md-4 .fa {
+  padding: 10px;
+  font-size: 40px;
+}
+.contact .col-md-4 .fab {
+  padding: 10px;
+  font-size: 40px;
+}
+.contact .btn {
+  border: 1px solid #fff;
+  background: transparent;
+  border-radius: 30px;
+  padding: 10px 25px 10px 25px;
+  margin: 5px;
+  transition: 0.3s all ease-in-out;
+}
+.contact .btn:focus {
+  box-shadow: none !important;
+}
+.contact .btn:hover {
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+.contact .btn .fa {
+  margin-right: 5px;
+}
+/* footer */
+.footer {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-top: 50px;
+  color: #fff;
+  background: #000;
+}
+/* nv-bar */
+.nav-item {
+  transition: 0.4s all ease-in-out;
+  padding-left: 10px;
+  margin: 0 !important;
+}
+
+.nav-item:hover {
+  background: rgb(209, 208, 208);
+}
+.nav-bar {
+  top: 0;
+  position: sticky;
+  z-index: 2;
+}
+.navbar {
+  background: #000 !important;
+}
+.nav-bar .fa-bars {
+  color: #fff;
+  font-size: 35px;
+  outline: none;
+}
+.nav-link {
+  color: #fff;
+  transition: 0.9s all ease;
+}
+.nav-link:hover {
+  color: red;
+}
+/* social-media */
+.social-media {
+  top: 50%;
+  transform: translateY(-50%);
+  position: sticky;
+  width: 80px;
+  z-index: 1;
+  margin-bottom: -200px;
+}
+.social-media ul {
+  list-style-type: none;
+  padding: initial;
+}
+.social-media ul li {
+  height: 40px;
+  width: 40px;
+  background: #000;
+  color: #fff;
+  padding-top: 6px;
+  margin-top: 2px;
+  transition: 0.4s all ease-in-out;
+}
+.social-media ul li:hover {
+  width: 80px;
+  padding-left: 30px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.services .col-md-4 {
+  animation: onebyone 1s ease-in;
+  animation-fill-mode: both;
+}
+.services .col-md-4:nth-child(1) {
+  animation-delay: 0.5s;
+}
+.services .row .col-md-4:nth-child(2) {
+  animation-delay: 1s;
+}
+.services .row .col-md-4:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.services .row .col-md-4:nth-child(4) {
+  animation-delay: 2s;
+}
+@keyframes onebyone {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  75% {
+    opacity: 0.5;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.projects {
+  display: none;
+}
+.project-box {
+  overflow: hidden;
+}
+.project-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(168, 71, 71, 0.6);
+  z-index: 1;
+  width: 100%;
+  height: 100px;
+
+  overflow: hidden;
+}
